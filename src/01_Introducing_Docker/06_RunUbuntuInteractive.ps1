@@ -1,0 +1,1 @@
+docker container run -i --tty --name ubuntu ubuntu:16.04 
