@@ -1,0 +1,1 @@
+docker run --name docker_traning_nanoserver -it mcr.microsoft.com/windows/nanoserver:1903-amd64

@@ -1,1 +1,1 @@
-docker container run --name nginx_detached --detach --publish 8080:80 nginx:alpine 
+docker container run --name docker_traning_nginx_detached --detach --publish 8080:80 nginx:alpine 

@@ -1,1 +1,1 @@
-docker container run -i --tty --name ubuntu ubuntu:16.04 
+docker container run -i --tty --name docker_traning_ubuntu ubuntu:16.04 
