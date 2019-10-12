@@ -1,0 +1,1 @@
+docker image build --tag tantsyurasergey/samplewebappmultistagebuild:1.0.0 .
