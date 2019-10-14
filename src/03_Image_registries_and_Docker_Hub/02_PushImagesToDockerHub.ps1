@@ -1,0 +1,1 @@
+docker image push tantsyurasergey/samplewebapp:1.0.0
