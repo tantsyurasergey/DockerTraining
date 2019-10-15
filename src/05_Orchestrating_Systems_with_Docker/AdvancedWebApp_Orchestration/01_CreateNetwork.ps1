@@ -1,0 +1,1 @@
+docker network create docker_training_network_advancedwebapp

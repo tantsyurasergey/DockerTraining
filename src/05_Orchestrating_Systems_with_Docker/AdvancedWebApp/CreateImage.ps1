@@ -1,0 +1,1 @@
+docker image build --tag tantsyurasergey/advancedwebapp:1.0.0 .

@@ -1,0 +1,9 @@
+datasources:
+- name: 'prometheus_datasource'
+  type: 'prometheus'
+  access: 'proxy'
+  org_id: 1
+  url: 'http://docker_training_prometheus:9090'
+  is_default: true
+  version: 1
+  editable: true
