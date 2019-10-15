@@ -1,1 +1,1 @@
-docker container run --name docker_traning_nginx_simple nginx:alpine 
+docker container run --name docker_training_nginx_simple nginx:alpine 

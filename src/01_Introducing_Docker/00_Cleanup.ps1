@@ -1,6 +1,6 @@
-docker container stop docker_traning_nginx_simple
-docker container stop docker_traning_nginx_detached
-docker container stop docker_traning_ubuntu
-docker container stop docker_traning_sqlserver
-docker container stop docker_traning_nanoserver
+docker container stop docker_training_nginx_simple
+docker container stop docker_training_nginx_detached
+docker container stop docker_training_ubuntu
+docker container stop docker_training_sqlserver
+docker container stop docker_training_nanoserver
 docker system prune
