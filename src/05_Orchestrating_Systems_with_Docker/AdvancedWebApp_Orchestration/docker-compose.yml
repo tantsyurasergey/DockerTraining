@@ -1,0 +1,36 @@
+version: '3.5'
+services:
+
+  prometheus:
+    image: prom/prometheus
+    container_name: 'docker_training_prometheus'
+    ports:
+      - '9090:9090'
+    networks:
+      - docker_training_network_advancedwebapp
+    volumes:
+      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+
+  grafana:
+    image: 'grafana/grafana'
+    container_name: 'docker_training_grafana'
+    ports:
+      - '3000:3000'
+    networks:
+      - docker_training_network_advancedwebapp
+    volumes:
+      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Grafana/provisioning:/etc/grafana/provisioning"
+      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Grafana/dashboards:/var/lib/grafana/dashboards"
+
+  advanced_web_app:
+    image: 'tantsyurasergey/advancedwebapp:1.0.0'
+    container_name: 'docker_training_advancedwebapp'
+    ports:
+      - '5020:5020'
+    networks:
+      - docker_training_network_advancedwebapp
+
+networks:
+  docker_training_network_advancedwebapp:
+    name: docker_training_network_advancedwebapp
+    driver: bridge
