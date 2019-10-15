@@ -1,0 +1,1 @@
+docker container run -it --rm --name docker_training_ubuntu --network docker_training_network tantsyurasergey/ubuntu-with-utils

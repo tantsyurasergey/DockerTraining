@@ -1,0 +1,1 @@
+docker container run -d --name docker_training_nginx --network docker_training_network nginx:alpine
