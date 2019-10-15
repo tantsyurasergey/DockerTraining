@@ -1,0 +1,1 @@
+docker image tag tantsyurasergey/samplewebapp:1.0.0 localhost:8080/tantsyurasergey/samplewebapp:1.0.0

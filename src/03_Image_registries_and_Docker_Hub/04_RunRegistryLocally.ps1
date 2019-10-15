@@ -1,0 +1,1 @@
+docker container run -d -p 8080:5000 --name local_registry registry:2

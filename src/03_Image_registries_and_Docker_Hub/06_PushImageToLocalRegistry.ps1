@@ -1,0 +1,1 @@
+docker image push localhost:8080/tantsyurasergey/samplewebapp:1.0.0
