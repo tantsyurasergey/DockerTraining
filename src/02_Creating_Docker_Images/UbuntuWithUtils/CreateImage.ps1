@@ -1,0 +1,1 @@
+docker image build --tag tantsyurasergey/ubuntu-with-utils:latest .
