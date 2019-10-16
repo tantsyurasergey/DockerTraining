@@ -9,7 +9,7 @@ services:
     networks:
       - docker_training_network_advancedwebapp
     volumes:
-      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+      - 'D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Prometheus/prometheus.yml:/etc/prometheus/prometheus.yml'
 
   grafana:
     image: 'grafana/grafana'
@@ -19,8 +19,8 @@ services:
     networks:
       - docker_training_network_advancedwebapp
     volumes:
-      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Grafana/provisioning:/etc/grafana/provisioning"
-      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Grafana/dashboards:/var/lib/grafana/dashboards"
+      - 'D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Grafana/provisioning:/etc/grafana/provisioning'
+      - 'D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/Grafana/dashboards:/var/lib/grafana/dashboards'
 
   advanced_web_app:
     image: 'tantsyurasergey/advancedwebapp:1.0.0'
@@ -28,7 +28,7 @@ services:
     ports:
       - '5020:5020'
     environment:
-      - AdvancedWebApp_ConnectionStrings__AdvancedWebAppDb='Data Source=docker_training_sqlserver;Initial Catalog=AdvancedWebAppDb;User ID=sa;Password=P@ssword123!'
+      - 'AdvancedWebApp_ConnectionStrings__AdvancedWebAppDb=Data Source=docker_training_sqlserver;Initial Catalog=AdvancedWebAppDb;User ID=sa;Password=P@ssword123!'
     networks:
       - docker_training_network_advancedwebapp
 
@@ -43,8 +43,8 @@ services:
     networks:
       - docker_training_network_advancedwebapp
     volumes:
-      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/SQL/CreateDatabase.sql:/AdvancedWebApp/CreateDatabase.sql"
-    command: sh -c '/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P P@ssword123! -i /AdvancedWebApp/CreateDatabase.sql & /opt/mssql/bin/sqlservr'
+      - 'D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/SQL/CreateDatabase.sql:/AdvancedWebApp/CreateDatabase.sql'
+    command: sh -c '/opt/mssql-tools/bin/sqlcmd -l 30 -S localhost -U sa -P P@ssword123! -i /AdvancedWebApp/CreateDatabase.sql & /opt/mssql/bin/sqlservr'
 
 networks:
   docker_training_network_advancedwebapp:
