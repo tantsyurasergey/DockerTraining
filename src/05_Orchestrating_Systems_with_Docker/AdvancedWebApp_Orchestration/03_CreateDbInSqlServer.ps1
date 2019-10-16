@@ -1,0 +1,1 @@
+docker container exec docker_training_sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P P@ssword123! -i /AdvancedWebApp/CreateDatabase.sql

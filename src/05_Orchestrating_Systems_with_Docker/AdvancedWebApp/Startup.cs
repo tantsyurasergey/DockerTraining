@@ -28,7 +28,7 @@ namespace AdvancedWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AdvancedWebAppDbContext>(options =>
-               options.UseSqlServer(_configuration.GetConnectionString("AdvancedWebAppDb")));
+                options.UseSqlServer(_configuration.GetConnectionString("AdvancedWebAppDb")));
             services.AddControllers();
         }
 

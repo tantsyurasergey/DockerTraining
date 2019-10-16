@@ -18,9 +18,9 @@ namespace AdvancedWebApp
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureHostConfiguration(configuration =>
+                .ConfigureAppConfiguration(configuration =>
                 {
-                    configuration.AddEnvironmentVariables(prefix: "AdvancedWebApp__");
+                    configuration.AddEnvironmentVariables(prefix: "AdvancedWebApp_");
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
