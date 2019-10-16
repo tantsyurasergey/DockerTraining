@@ -1,0 +1,1 @@
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d -v c:/docker/sql:/var/opt/mssql mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
