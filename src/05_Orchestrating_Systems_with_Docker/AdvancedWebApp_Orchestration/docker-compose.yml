@@ -27,8 +27,24 @@ services:
     container_name: 'docker_training_advancedwebapp'
     ports:
       - '5020:5020'
+    environment:
+      - AdvancedWebApp_ConnectionStrings__AdvancedWebAppDb='Data Source=docker_training_sqlserver;Initial Catalog=AdvancedWebAppDb;User ID=sa;Password=P@ssword123!'
     networks:
       - docker_training_network_advancedwebapp
+
+  sql:
+    image: 'mcr.microsoft.com/mssql/server:2017-latest'
+    container_name: 'docker_training_sqlserver'
+    ports:
+      - '14330:1433'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P@ssword123!
+    networks:
+      - docker_training_network_advancedwebapp
+    volumes:
+      - "D:/DockerTraining/src/05_Orchestrating_Systems_with_Docker/AdvancedWebApp_Orchestration/SQL/CreateDatabase.sql:/AdvancedWebApp/CreateDatabase.sql"
+    command: sh -c '/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P P@ssword123! -i /AdvancedWebApp/CreateDatabase.sql & /opt/mssql/bin/sqlservr'
 
 networks:
   docker_training_network_advancedwebapp:
