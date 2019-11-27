@@ -23,11 +23,6 @@ namespace AdvancedWebApp.Controllers
         public IEnumerable<Item> Get()
         {
             return _context.Items;
-            // return new [] { new Item {
-            //     Id = Guid.NewGuid(),
-            //     Name = "Name",
-            //     ParentId = Guid.NewGuid()
-            // }};
         }
     }
 }
